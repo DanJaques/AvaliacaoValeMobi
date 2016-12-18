@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet"  type="text/css" href="bootstrap/css/estilo.css"/>
+
+    </head>
+    <title>Login</title>
+
+<style>
+body{
+    background-color:#204d74;
+
+}
+  div#interface  {
+    width: 370px;
+    background-color: white;
+    margin: 90px auto auto auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,1);
+    padding: 10px; }
+
+    form#login {
+        padding: 10px;
+                  }
+    input#entrar{
+        margin: 0px 0px auto 60px;
+            }
+    input#cUsuario{
+        margin-left:12px;
+
+    }
+
+</style>
+
+<script>
+    function Nova()
+    {
+        location.href="cadastro.html";
+    }
+</script>
+
+
+
+<body>
+
+<div id="interface">
+<form id="login" name="loginForm" method="post" action="autenticacao.php">
+    <br><br>
+    <p><label for="cUsuario">E-Mail&nbsp;<input type="text" name="email" id="cUsuario" size="25" maxlength="50" placeholder="Insira o e-mail cadastrado aqui" required/>
+    <p><label for="cSenha">Senha &nbsp;&nbsp;&nbsp;<input type="password" name="senha" id="cSenha" size="25" maxlength="25" placeholder="Senha" required/>
+    <br><br>
+   <input type="submit" value="Login" id="entrar" class="btn"/>&nbsp;&nbsp;&nbsp;
+    <input type="button" value="Cadastrar" id="cadastrar" class="btn" onclick="Nova()"/>
+
+</form>
+</div>
+</body>
+</html>

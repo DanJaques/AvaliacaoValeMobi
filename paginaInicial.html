@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastrar Produto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"  type="text/css" href="bootstrap/css/estilo.css"/>
+
+
+    <style>
+        div#teste {
+            position: relative;
+        }
+        #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+        #section2 {padding-top:30px;height:500px;color: #fff; background-color:#2b669a}
+        #section3 {padding-top:0px;height:500px;color: #fff; background-color: #122b40;}
+        body{
+
+            background-color: #1C1C1C;
+             width: 1000px;
+            margin: -20px auto 0px auto;
+            box-shadow: 0px 0px 0px rgba(0,0,0,.5);
+            padding:10px;
+
+        }
+
+        fieldset#formulario{
+            border: none;
+            width:300px;
+            margin: 50px 0px 0px 100px;
+            padding: 0px 0px 12px 4px;
+    }
+
+        fieldset#formulario2{
+            border: none;
+            width:300px;
+            margin: -92px 0px 0px 500px;
+            padding: 4px 0px 12px 4px;
+        }
+        fieldset#formulario3{
+            border: none;
+            width:300px;
+            margin: 50px 0px 0px 100px;
+            padding: 4px 0px 12px 4px;
+        }
+
+        fieldset#formulario4{
+            border: none;
+            width:300px;
+            margin: -92px 0px 0px 500px;
+            padding: 4px 0px 12px 4px;
+        }
+        fieldset#formulario5{
+            border: none;
+            width:300px;
+            margin: 50px 0px 0px 100px;
+            padding: 0px 0px 12px 4px;
+        }
+        fieldset#formulario6{
+            border: none;
+            width:300px;
+            margin: -92px 0px 0px 500px;
+            padding: 4px 0px 12px 4px;
+        }
+
+        legend{
+        color: cornsilk;
+
+
+}
+        input{
+            color: black;
+
+        }
+        input#cadastrarProduto{
+            margin: 40px 0px 0px 640px;
+
+        }
+
+        input#venderProduto{
+            margin: 40px 0px 0px 640px;
+
+        }
+        iframe#frameSpec{
+            width: 900px;
+            height: 360px;
+            border:none;
+            margin-left: 30px;
+        }
+
+
+
+
+
+    </style>
+
+    </head>
+
+<body>
+<div id="teste" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Teste Vale Mobi</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#section1">Cadastrar Produto</a></li>
+                    <li><a href="#section2">Vender Produto</a></li>
+                    <li><a href="#section3">Estoque</a></li>
+
+                 </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="section1" class="container-fluid">
+    <h1>Cadastrar Mercadoria</h1>
+
+    <form name="cadastroProduto" method="post" action="cadastrarProduto.php">
+
+       <fieldset id="formulario">
+           <legend>Nome da Mercadoria</legend>
+    <input type="text" name="nomeProduto" size="36" maxlength="36" placeholder="Insira aqui o nome do produto" required/>
+    </fieldset>
+
+    <fieldset id="formulario2">
+        <legend>Descrição da Mercadoria</legend>
+        <input type="text" name="descProduto" size="36" maxlength="36" placeholder="Insira aqui a descrição do produto" required/>
+    </fieldset>
+
+    <fieldset id="formulario3">
+        <legend>Código</legend>
+        <input type="text" name="codProduto" size="36" placeholder="Insira aqui o código do produto" required/>
+    </fieldset>
+    <fieldset id="formulario4">
+        <legend>Quantidade</legend>
+        <input type="text" name="qtdProduto" size="36" placeholder="Insira aqui a quantidade de produtos" required/>
+    </fieldset>
+    <input type="submit" value="Cadastrar Produto" id="cadastrarProduto" class="btn"/>
+
+    </form>
+
+</div>
+
+
+<div id="section2" class="container-fluid">
+    <h1>Vender Mercadoria</h1>
+
+    <form name="vendaProduto" method="post" action="vendaProduto.php">
+
+         <fieldset id="formulario5">
+            <legend>Código</legend>
+            <input type="text" name="codProduto" size="36" placeholder="Insira aqui o código do produto" required/>
+        </fieldset>
+        <fieldset id="formulario6">
+            <legend>Quantidade</legend>
+            <input type="text" name="qtdProduto" size="36" placeholder="Insira aqui a quantidade de produtos" required/>
+        </fieldset>
+        <input type="submit" value="Realizar Venda" id="venderProduto" class="btn"/>
+        <h2>Não finalizado</h2>
+    </form>
+
+</div>
+    <div id="section3" class="container-fluid">
+        <h1>Estoque</h1>
+        <iframe src="mostrarProduto.php" id="frameSpec"></iframe>
+
+
+
+
+
+    </form>
+    </div>
+
+
+</div>
+
+</body>
+</html>
